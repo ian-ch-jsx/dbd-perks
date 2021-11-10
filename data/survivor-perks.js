@@ -2,7 +2,7 @@ export const survivorPerks = [
     {
         id: 1,
         name: 'Ace in the Hole',
-        image: 'placeholder',
+        image: '../assets/aceinthehole.png',
         category: 'resource',
     },
     {
