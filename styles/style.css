@@ -44,7 +44,7 @@ button {
     padding: 10px;
 }
 
-button.submit {
+button#roll-btn {
     width: 100px;
 }
 
