@@ -1,5 +1,5 @@
 import { survivorPerks } from './data/survivor-perks.js';
-
+console.log(survivorPerks.length);
 const rollBtn = document.getElementById('roll-btn');
 const reRollBtn = document.getElementById('re-roll-btn');
 const winLossContainer = document.getElementById('win-loss-container');
@@ -49,7 +49,6 @@ rollBtn.addEventListener('click', ()=> {
 });
 
 reRollBtn.addEventListener('click', ()=> {
-    //if win checked
     const winRadio = document.querySelector('input[type=radio]:checked#win');
     const lossRadio = document.querySelector('input[type=radio]:checked#loss');
     if (winRadio) {
