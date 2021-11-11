@@ -74,25 +74,25 @@ main {
     margin: 0px auto 40px auto;
   }
   
-  .perk-1-slot { 
+  #perk-1-slot { 
       grid-area: 1 / 1 / 2 / 3; 
       width: 150px;
       background-color: #121212;
     }
 
-    .perk-2-slot { 
+    #perk-2-slot { 
         grid-area: 1 / 2 / 2 / 3; 
         width: 150px;
         background-color: #121212;
     }
   
-  .perk-3-slot { 
+  #perk-3-slot { 
       grid-area: 2 / 1 / 3 / 2; 
       width: 150px;
       background-color: #121212;
     }
   
-  .perk-4-slot { 
+  #perk-4-slot { 
       grid-area: 2 / 2 / 3 / 3;
       width: 150px;
       background-color: #121212;

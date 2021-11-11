@@ -1,6 +1,11 @@
 import { survivorPerks } from './data/survivor-perks.js';
 
 const rollBtn = document.getElementById('roll-btn');
+const names = document.getElementById('names');
+const survPerk1Img = document.getElementById('perk-1-slot');
+const survPerk2Img = document.getElementById('perk-2-slot');
+const survPerk3Img = document.getElementById('perk-3-slot');
+const survPerk4Img = document.getElementById('perk-4-slot');
 
 const generatePerks = () =>{
     let randPerk1 = Math.floor(Math.random() * survivorPerks.length);
@@ -22,17 +27,16 @@ const generatePerks = () =>{
         randPerk4 = Math.floor(Math.random() * survivorPerks.length);   
     }
     let survPerk1 = survivorPerks[randPerk1];
-    console.log(survPerk1.name);
-
+    survPerk1Img.src = `./assets/${survPerk1.image}`;
     let survPerk2 = survivorPerks[randPerk2];
-    console.log(survPerk2.name);
-
+    survPerk2Img.src = `./assets/${survPerk2.image}`;
     let survPerk3 = survivorPerks[randPerk3];
-    console.log(survPerk3.name);
-
+    survPerk3Img.src = `./assets/${survPerk3.image}`;
     let survPerk4 = survivorPerks[randPerk4];
-    console.log(survPerk4.name);
+    survPerk4Img.src = `./assets/${survPerk4.image}`;
+    names.textContent = survPerk1.name + survPerk2.name + survPerk3.name + survPerk4.name;
 };
-generatePerks();
+
 rollBtn.addEventListener('click', ()=> {
+    generatePerks();
 });
