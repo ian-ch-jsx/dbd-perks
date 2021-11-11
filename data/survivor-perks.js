@@ -140,7 +140,7 @@ export const survivorPerks = [
         name: 'Breakout',
         image: '../assets/breakout.png',
         category: 'Utility',
-        secondary: 'none'
+        secondary: 'Second Chance'
     },
     {
         id: 21,
