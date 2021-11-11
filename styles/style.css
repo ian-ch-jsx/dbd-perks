@@ -44,7 +44,7 @@ button {
     padding: 10px;
 }
 
-button#roll-btn {
+button#roll-btn,#re-roll-btn {
     width: 100px;
 }
 
@@ -98,3 +98,18 @@ main {
       background-color: #121212;
      }
   
+.hidden {
+    display: none;
+}
+
+#win-loss-container {
+    display: flex;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+input[type=radio]:checked + p {
+    color: red;
+}

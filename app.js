@@ -1,7 +1,10 @@
 import { survivorPerks } from './data/survivor-perks.js';
 
 const rollBtn = document.getElementById('roll-btn');
-const names = document.getElementById('names');
+const reRollBtn = document.getElementById('re-roll-btn');
+const winLossContainer = document.getElementById('win-loss-container');
+const escapedLabel = document.getElementById('escaped-label');
+const sacrificedLabel = document.getElementById('sacrificed-label');
 const survPerk1Img = document.getElementById('perk-1-slot');
 const survPerk2Img = document.getElementById('perk-2-slot');
 const survPerk3Img = document.getElementById('perk-3-slot');
@@ -34,9 +37,31 @@ const generatePerks = () =>{
     survPerk3Img.src = `./assets/${survPerk3.image}`;
     let survPerk4 = survivorPerks[randPerk4];
     survPerk4Img.src = `./assets/${survPerk4.image}`;
-    names.textContent = survPerk1.name + survPerk2.name + survPerk3.name + survPerk4.name;
 };
 
 rollBtn.addEventListener('click', ()=> {
+    generatePerks();
+    rollBtn.classList.add('hidden');
+    reRollBtn.classList.remove('hidden');
+    winLossContainer.classList.remove('hidden');
+    escapedLabel.classList.remove('hidden');
+    sacrificedLabel.classList.remove('hidden');
+});
+
+reRollBtn.addEventListener('click', ()=> {
+    //if win checked
+    const winRadio = document.querySelector('input[type=radio]:checked#win');
+    const lossRadio = document.querySelector('input[type=radio]:checked#loss');
+    if (winRadio) {
+        console.log('you won');
+    }
+    else if (lossRadio) {
+        console.log('you lost');
+    }
+    else {
+        console.log('error');
+    }
+    document.getElementById('win').checked = false;
+    document.getElementById('loss').checked = false;
     generatePerks();
 });
