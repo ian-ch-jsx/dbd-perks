@@ -177,8 +177,6 @@ rollBtn.addEventListener('click', ()=> {
         generateNoSecondChancePerks();
     } else if (lootCheck.checked) {
         generateNoLootPerks();
-    } else if (lootCheck.checked) {
-        generateNoLootPerks();
     } else {
         generatePerks();
     }
