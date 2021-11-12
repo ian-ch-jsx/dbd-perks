@@ -31,22 +31,24 @@
             <img src="./assets/aceinthehole.png" id="perk-4-slot">
         </div>
         <section id="exclusions-container">
-            <label for="exclude-exhaust">
-                <input type="checkbox" class="exclusions" id="exhaust-check" name="exhaustion">
-                Exclude Exhaustion
-            </label>
-            <label for="exclude-healing">
-                <input type="checkbox" class="exclusions" id="healing-check" name="healing">
-                Exclude Healing
-            </label>
-            <label for="exclude-chance">
-                <input type="checkbox" class="exclusions" id="chance-check" name="chance">
-                Exclude Second Chance
-            </label>
-            <label for="exclude-loot">
-                <input type="checkbox" class="exclusions" id="loot-check" name="loot">
-                Exclude Loot
-            </label>
+            <form id="exclusions-form">
+                <label for="exclude-exhaust">
+                    <input type="checkbox" class="exclusions" id="exhaust-check" name="exhaustion">
+                    Exclude Exhaustion
+                </label>
+                <label for="exclude-healing">
+                    <input type="checkbox" class="exclusions" id="healing-check" name="healing">
+                    Exclude Healing
+                </label>
+                <label for="exclude-chance">
+                    <input type="checkbox" class="exclusions" id="chance-check" name="chance">
+                    Exclude Second Chance
+                </label>
+                <label for="exclude-loot">
+                    <input type="checkbox" class="exclusions" id="loot-check" name="loot">
+                    Exclude Loot
+                </label>
+            </form>
         </section>
         <button id="roll-btn">Roll</button>
         <section id="win-loss-container" class="hidden">
@@ -59,7 +61,6 @@
                 <p>Sacrificed</p>
             </label>
         </section>
-        <button id="re-roll-btn" class="hidden">Roll</button>
         <div id="test-div"></div>
     </main>
     <script type="module" src="./app.js"></script>
