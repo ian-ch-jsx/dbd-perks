@@ -163,28 +163,32 @@ const generateNoLootPerks = () =>{
     survPerk4Img.src = `./assets/${survPerk4.image}`;
 };
 
-rollBtn.addEventListener('click', ()=> {
-    const exhaustCheck = document.getElementById('exhaust-check');
-    const healingCheck = document.getElementById('healing-check');
-    const chanceCheck = document.getElementById('chance-check');
-    const lootCheck = document.getElementById('loot-check');
+let exclusions = document.querySelectorAll('.exclusions');
+let finalPerks = survivorPerks;
 
-    if (exhaustCheck.checked) {
-        generateNoExhaustPerks();
-    } else if (healingCheck.checked) {
-        generateNoHealingPerks();
-    } else if (chanceCheck.checked) {
-        generateNoSecondChancePerks();
-    } else if (lootCheck.checked) {
-        generateNoLootPerks();
-    } else {
-        generatePerks();
-    }
-    // rollBtn.classList.add('hidden');
-    // reRollBtn.classList.remove('hidden');
-    // winLossContainer.classList.remove('hidden');
-    // escapedLabel.classList.remove('hidden');
-    // sacrificedLabel.classList.remove('hidden');
+const filterPerks = () =>{
+    exclusions.forEach((item, index) =>{
+        if (item.checked && index == 0) {
+            finalPerks = finalPerks.filter(survivorPerks => survivorPerks.secondary !== 'Exhaustion');
+        }
+        else if (item.checked && index == 1) {
+            finalPerks = finalPerks.filter(survivorPerks => survivorPerks.secondary !== 'Healing');
+        }
+        else if (item.checked && index == 2) {
+            finalPerks = finalPerks.filter(survivorPerks => survivorPerks.secondary !== 'Second Chance');
+        }
+        else if (item.checked && index == 3) {
+            finalPerks = finalPerks.filter(survivorPerks => survivorPerks.secondary !== 'Loot');
+        }
+    });
+    console.log(finalPerks);
+};
+
+
+
+rollBtn.addEventListener('click', ()=> {
+    filterPerks();
+
 });
 
 reRollBtn.addEventListener('click', ()=> {

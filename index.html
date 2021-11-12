@@ -32,19 +32,19 @@
         </div>
         <section id="exclusions-container">
             <label for="exclude-exhaust">
-                <input type="checkbox" id="exhaust-check" name="exhaustion">
+                <input type="checkbox" class="exclusions" id="exhaust-check" name="exhaustion">
                 Exclude Exhaustion
             </label>
             <label for="exclude-healing">
-                <input type="checkbox" id="healing-check" name="healing">
+                <input type="checkbox" class="exclusions" id="healing-check" name="healing">
                 Exclude Healing
             </label>
             <label for="exclude-chance">
-                <input type="checkbox" id="chance-check" name="chance">
+                <input type="checkbox" class="exclusions" id="chance-check" name="chance">
                 Exclude Second Chance
             </label>
             <label for="exclude-loot">
-                <input type="checkbox" id="loot-check" name="loot">
+                <input type="checkbox" class="exclusions" id="loot-check" name="loot">
                 Exclude Loot
             </label>
         </section>
@@ -60,6 +60,7 @@
             </label>
         </section>
         <button id="re-roll-btn" class="hidden">Roll</button>
+        <div id="test-div"></div>
     </main>
     <script type="module" src="./app.js"></script>
 </body>
