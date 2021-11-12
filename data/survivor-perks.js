@@ -277,8 +277,8 @@ export const survivorPerks = [
     },
     {
         id: 40,
-        name: 'Flash Bang',
-        image: '../assets/flashBang.png',
+        name: 'Flashbang',
+        image: '../assets/flashbang.png',
         category: 'Utility',
         secondary: 'none'
     },
