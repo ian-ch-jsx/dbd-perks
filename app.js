@@ -6,6 +6,7 @@ const survPerk1Img = document.getElementById('perk-1-slot');
 const survPerk2Img = document.getElementById('perk-2-slot');
 const survPerk3Img = document.getElementById('perk-3-slot');
 const survPerk4Img = document.getElementById('perk-4-slot');
+const perkNames = document.getElementById('perk-names');
 
 let exclusions = document.querySelectorAll('.exclusions');
 let finalPerks = survivorPerks;
@@ -54,6 +55,7 @@ const generatePerks = () =>{
     survPerk3Img.src = `./assets/${survPerk3.image}`;
     let survPerk4 = finalPerks[randPerk4];
     survPerk4Img.src = `./assets/${survPerk4.image}`;
+    perkNames.textContent = survPerk1.name + survPerk2.name + survPerk3.name + survPerk4.name;
 };
 
 rollBtn.addEventListener('click', ()=> {
