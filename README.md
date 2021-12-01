@@ -7,4 +7,3 @@ High Priority
 * chart.js
 
 # Bug Fixes
-* deselecting search parameters does not update the possible perks

@@ -44,11 +44,11 @@ const generatePerks = () => {
 
     while (
         randPerk1 === randPerk2 ||
-    randPerk1 === randPerk3 ||
-    randPerk1 === randPerk4 ||
-    randPerk2 === randPerk3 ||
-    randPerk2 === randPerk4 ||
-    randPerk3 === randPerk4
+        randPerk1 === randPerk3 ||
+        randPerk1 === randPerk4 ||
+        randPerk2 === randPerk3 ||
+        randPerk2 === randPerk4 ||
+        randPerk3 === randPerk4
     ) {
         randPerk1 = Math.floor(Math.random() * finalPerks.length);
         randPerk2 = Math.floor(Math.random() * finalPerks.length);
@@ -72,4 +72,5 @@ const generatePerks = () => {
 rollBtn.addEventListener('click', () => {
     filterPerks();
     generatePerks();
+    finalPerks = survivorPerks;
 });
