@@ -271,7 +271,7 @@ export const survivorPerks = [
     {
         id: 39,
         name: 'Fast Track',
-        image: '../assets/empathy.png',
+        image: '../assets/fastTrack.png',
         category: 'Utility',
         secondary: 'none'
     },
