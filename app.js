@@ -39,7 +39,10 @@ const filterPerks = () => {
     });
 };
 
-let resultPerks;
+let resultPerks1;
+let resultPerks2;
+let resultPerks3;
+let resultPerks4;
 
 const generatePerks = () => {
     let randPerk1 = Math.floor(Math.random() * finalPerks.length);
@@ -73,7 +76,10 @@ const generatePerks = () => {
     survPerk4Img.src = `./assets/${survPerk4.image}`;
     perkName4.textContent = survPerk4.name;
 
-    resultPerks = [survPerk1.id, survPerk2.id, survPerk3.id, survPerk4.id];
+    resultPerks1 = survPerk1.id;
+    resultPerks2 = survPerk2.id;
+    resultPerks3 = survPerk3.id;
+    resultPerks4 = survPerk4.id;
 };
 
 function results(){
@@ -89,9 +95,15 @@ rollBtn.addEventListener('click', () => {
 });
 
 wonBtn.addEventListener('click', () => {
-    console.log(resultPerks);
+    matchWon(resultPerks1);
+    matchWon(resultPerks2);
+    matchWon(resultPerks3);
+    matchWon(resultPerks4);
 });
 
 lostBtn.addEventListener('click', () => {
-    console.log(resultPerks);
+    matchLost(resultPerks1);
+    matchLost(resultPerks2);
+    matchLost(resultPerks3);
+    matchLost(resultPerks4);
 });
