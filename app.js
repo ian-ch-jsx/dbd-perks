@@ -1,5 +1,6 @@
 /* eslint-disable eqeqeq */
 import { survivorPerks } from './data/survivor-perks.js';
+import { matchWon, matchLost } from './utils.js';
 
 const rollBtn = document.getElementById('roll-btn');
 const survPerk1Img = document.getElementById('perk-1-image');
@@ -10,9 +11,9 @@ const perkName1 = document.getElementById('perk-1-name');
 const perkName2 = document.getElementById('perk-2-name');
 const perkName3 = document.getElementById('perk-3-name');
 const perkName4 = document.getElementById('perk-4-name');
-const wonLabel = document.getElementById('escaped-label');
-const lostLabel = document.getElementById('sacrificed-label');
-const skipLabel = document.getElementById('skip-label');
+const wonBtn = document.getElementById('escaped-btn');
+const lostBtn = document.getElementById('sacrificed-btn');
+const skipBtn = document.getElementById('skip-btn');
 
 let exclusions = document.querySelectorAll('.exclusions');
 let finalPerks = survivorPerks;
@@ -73,10 +74,11 @@ const generatePerks = () => {
 };
 
 rollBtn.addEventListener('click', () => {
+    wonBtn.classList.remove('hidden');
+    lostBtn.classList.remove('hidden');
+    skipBtn.classList.remove('hidden');
     filterPerks();
     generatePerks();
     finalPerks = survivorPerks;
-    wonLabel.classList.remove('hidden');
-    lostLabel.classList.remove('hidden');
-    skipLabel.classList.remove('hidden');   
+
 });

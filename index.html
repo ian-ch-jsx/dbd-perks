@@ -102,21 +102,12 @@
           </label>
         </form>
       </section>
-      <section id="win-loss-container" class="hidden">
-        <label class="win-loss hidden" id="escaped-label">
-          <input name="winOrLoss" type="radio" id="win" />
-          <p>Escaped</p>
-        </label>
-        <label class="win-loss hidden" id="sacrificed-label">
-          <input name="winOrLoss" type="radio" id="loss" />
-          <p>Sacrificed</p>
-        </label>
-        <label class="win-loss hidden" id="skip-label">
-          <input name="winOrLoss" type="radio" id="skip" />
-          <p>Skip</p>
-        </label>
+      <section id="win-loss-container">
+        <button id="escaped-btn" class="hidden">Escaped</button>
+        <button id="sacrificed-btn" class="hidden">Sacrificed</button>
       </section>
       <button id="roll-btn">Roll</button>
+  
     </main>
     <script type="module" src="./app.js"></script>
   </body>
