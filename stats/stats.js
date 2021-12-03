@@ -7,8 +7,8 @@ const homeBtn = document.getElementById('home-btn');
 const resetBtn = document.getElementById('clear');
 
 stats.sort((one, two) => two.won - one.won);
-console.log(stats);
-for (let stat of stats){
+const topTen = stats.slice(0, 10);
+for (let stat of topTen){
     const perk = findByID(survivorPerks, stat.id);
     const div = document.createElement('div');
     div.classList.add('results-container');
