@@ -102,7 +102,6 @@
           </label>
         </form>
       </section>
-      <button id="roll-btn">Roll</button>
       <section id="win-loss-container" class="hidden">
         <label class="win-loss hidden" id="escaped-label">
           <input name="winOrLoss" type="radio" id="win" />
@@ -112,8 +111,12 @@
           <input name="winOrLoss" type="radio" id="loss" />
           <p>Sacrificed</p>
         </label>
+        <label class="win-loss hidden" id="skip-label">
+          <input name="winOrLoss" type="radio" id="skip" />
+          <p>Skip</p>
+        </label>
       </section>
-      <div id="test-div"></div>
+      <button id="roll-btn">Roll</button>
     </main>
     <script type="module" src="./app.js"></script>
   </body>
