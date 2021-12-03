@@ -8,6 +8,9 @@ for (let stat of stats){
     const perk = findByID(survivorPerks, stat.id);
     const div = document.createElement('div');
     div.classList.add('results-container');
+    const img = document.createElement('img');
+    img.src = perk.image;
+    img.classList.add('stats-image');
     const header = document.createElement('h3');
     header.textContent = perk.name;
     
@@ -16,7 +19,6 @@ for (let stat of stats){
     const resultsSpan2 = document.createElement('span');
     resultsSpan2.textContent = `Lost: ${stat.lost}`;
 
-    div.append(header, resultsSpan1, resultsSpan2);
+    div.append(img, header, resultsSpan1, resultsSpan2);
     main.append(div);
-    console.log('wtf');
 }
