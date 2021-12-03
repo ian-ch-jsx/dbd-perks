@@ -26,4 +26,4 @@ for (let stat of stats){
 
 homeBtn.addEventListener('click', () => {
     window.location.replace('../index.html');
-})
+});

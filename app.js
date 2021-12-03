@@ -100,6 +100,8 @@ wonBtn.addEventListener('click', () => {
     matchWon(resultPerks2);
     matchWon(resultPerks3);
     matchWon(resultPerks4);
+    lostBtn.classList.add('hidden');
+    wonBtn.classList.add('hidden');
 });
 
 lostBtn.addEventListener('click', () => {
@@ -107,8 +109,10 @@ lostBtn.addEventListener('click', () => {
     matchLost(resultPerks2);
     matchLost(resultPerks3);
     matchLost(resultPerks4);
+    lostBtn.classList.add('hidden');
+    wonBtn.classList.add('hidden');
 });
 
 statsBtn.addEventListener('click', () => {
     window.location.replace('./stats');
-})
+});
