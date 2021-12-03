@@ -3,6 +3,7 @@ import { findByID, getStats } from '../utils.js';
 
 const stats = getStats();
 const main = document.getElementById('main');
+const homeBtn = document.getElementById('home-btn');
 
 for (let stat of stats){
     const perk = findByID(survivorPerks, stat.id);
@@ -22,3 +23,7 @@ for (let stat of stats){
     div.append(img, header, resultsSpan1, resultsSpan2);
     main.append(div);
 }
+
+homeBtn.addEventListener('click', () => {
+    window.location.replace('../index.html');
+})

@@ -13,6 +13,7 @@ const perkName3 = document.getElementById('perk-3-name');
 const perkName4 = document.getElementById('perk-4-name');
 const wonBtn = document.getElementById('escaped-btn');
 const lostBtn = document.getElementById('sacrificed-btn');
+const statsBtn = document.getElementById('stats');
 
 let exclusions = document.querySelectorAll('.exclusions');
 let finalPerks = survivorPerks;
@@ -107,3 +108,7 @@ lostBtn.addEventListener('click', () => {
     matchLost(resultPerks3);
     matchLost(resultPerks4);
 });
+
+statsBtn.addEventListener('click', () => {
+    window.location.replace('./stats');
+})
