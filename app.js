@@ -13,7 +13,6 @@ const perkName3 = document.getElementById('perk-3-name');
 const perkName4 = document.getElementById('perk-4-name');
 const wonBtn = document.getElementById('escaped-btn');
 const lostBtn = document.getElementById('sacrificed-btn');
-const skipBtn = document.getElementById('skip-btn');
 
 let exclusions = document.querySelectorAll('.exclusions');
 let finalPerks = survivorPerks;
@@ -39,6 +38,8 @@ const filterPerks = () => {
         }
     });
 };
+
+let resultPerks;
 
 const generatePerks = () => {
     let randPerk1 = Math.floor(Math.random() * finalPerks.length);
@@ -71,14 +72,26 @@ const generatePerks = () => {
     let survPerk4 = finalPerks[randPerk4];
     survPerk4Img.src = `./assets/${survPerk4.image}`;
     perkName4.textContent = survPerk4.name;
+
+    resultPerks = [survPerk1.id, survPerk2.id, survPerk3.id, survPerk4.id];
 };
+
+function results(){
+    filterPerks();
+    generatePerks();
+}
 
 rollBtn.addEventListener('click', () => {
     wonBtn.classList.remove('hidden');
     lostBtn.classList.remove('hidden');
-    skipBtn.classList.remove('hidden');
-    filterPerks();
-    generatePerks();
-    finalPerks = survivorPerks;
+    results();
+    finalPerks = survivorPerks; 
+});
 
+wonBtn.addEventListener('click', () => {
+    console.log(resultPerks);
+});
+
+lostBtn.addEventListener('click', () => {
+    console.log(resultPerks);
 });
