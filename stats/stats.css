@@ -1,7 +1,12 @@
 main {
     display: flex;
     flex-direction: column;
-    margin: auto;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    margin: 0;
+    padding: 0;
 }
 
 .results-container {
@@ -17,4 +22,9 @@ main {
 
 h3 {
     margin: 0;
+}
+
+#clear {
+    display: flex;
+    margin: 20px auto auto auto;
 }

@@ -4,6 +4,7 @@ import { findByID, getStats } from '../utils.js';
 const stats = getStats();
 const main = document.getElementById('main');
 const homeBtn = document.getElementById('home-btn');
+const resetBtn = document.getElementById('clear');
 
 for (let stat of stats){
     const perk = findByID(survivorPerks, stat.id);
@@ -26,4 +27,9 @@ for (let stat of stats){
 
 homeBtn.addEventListener('click', () => {
     window.location.replace('../index.html');
+});
+
+resetBtn.addEventListener('click', ()=>{
+    localStorage.clear();
+    window.location.reload();
 });
