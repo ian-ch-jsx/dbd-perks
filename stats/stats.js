@@ -6,6 +6,8 @@ const main = document.getElementById('main');
 const homeBtn = document.getElementById('home-btn');
 const resetBtn = document.getElementById('clear');
 
+stats.sort((one, two) => two.won - one.won);
+console.log(stats);
 for (let stat of stats){
     const perk = findByID(survivorPerks, stat.id);
     const div = document.createElement('div');
@@ -24,7 +26,6 @@ for (let stat of stats){
     div.append(img, header, resultsSpan1, resultsSpan2);
     main.append(div);
 }
-
 homeBtn.addEventListener('click', () => {
     window.location.replace('../index.html');
 });
