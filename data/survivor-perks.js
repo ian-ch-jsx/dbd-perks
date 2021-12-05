@@ -257,7 +257,7 @@ export const survivorPerks = [
     {
         id: 37,
         name: 'Diversion',
-        image: '../assets/breakout.png',
+        image: '../assets/diversion.png',
         category: 'Utility',
         secondary: 'Stealth'
     },
