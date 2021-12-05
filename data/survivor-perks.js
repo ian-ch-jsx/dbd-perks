@@ -544,7 +544,7 @@ export const survivorPerks = [
     {
         id: 78,
         name: 'Self Preservation',
-        image: '../assets/openHanded.png',
+        image: '../assets/selfPreservation.png',
         category: 'Stealth',
         secondary: 'none'
     },
